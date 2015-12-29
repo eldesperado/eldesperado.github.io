@@ -184,7 +184,7 @@ body
     font-size: $rs/8*5
     text-transform: uppercase
     letter-spacing: 1px
-
+    
 .archive-template
   .index-headline.featured
     display: none
@@ -585,6 +585,84 @@ body
   margin-top: 50px
 .post-tag-articleimage
   display: none
+
+
+.postNav 
+  margin-top: 50px
+  border-top: 1px solid darken(white, 10%)
+  border-bottom: 1px solid darken(white, 10%)
+  overflow: hidden
+
+  .prev, .next 
+    display: block
+    width: 50%
+    height: 5rem
+    overflow: hidden
+    position: relative
+    font-family: $font-sans
+    font-weight: 800
+    font-size: .9em
+    text-transform: uppercase
+    text-align: center
+
+    img 
+      z-index: 1
+      display: block
+      position: absolute
+      top: 50%
+      -webkit-transform: translateY(-50%)
+      -ms-transform: translateY(-50%)
+      transform: translateY(-50%)
+      left: 0
+      width: 100%
+      height: auto
+    
+
+    span 
+      z-index: 10
+      position: relative
+      padding: .5rem
+      position: absolute
+      top: 50%
+      -webkit-transform: translateY(-50%)
+      -ms-transform: translateY(-50%)
+      transform: translateY(-50%)
+      width: 100%
+      line-height: 1.4
+    
+
+    &.image 
+      text-decoration: none
+      color: white
+      text-shadow: 1px 1px 3px rgba(0,0,0,.8)
+      padding: 0 .5rem
+      position: relative
+      @include transition(all 0.2s ease-in-out)
+    
+
+    &:hover 
+      &.image 
+        opacity: .8
+      
+    
+  
+
+  .prev 
+    float: left
+    text-align: left
+    span 
+      left: 0
+    
+  
+
+  .next 
+    text-align: right
+    float: right
+    span 
+      right: 0
+    
+  
+
 
 pre,
 code

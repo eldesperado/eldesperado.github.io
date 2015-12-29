@@ -724,6 +724,66 @@ body {
 .post-tag-articleimage {
   display: none; }
 
+.postNav {
+  margin-top: 50px;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  overflow: hidden; }
+  .postNav .prev, .postNav .next {
+    display: block;
+    width: 50%;
+    height: 5rem;
+    overflow: hidden;
+    position: relative;
+    font-family: Open Sans, MundoSans, "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    text-align: center; }
+    .postNav .prev img, .postNav .next img {
+      z-index: 1;
+      display: block;
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      left: 0;
+      width: 100%;
+      height: auto; }
+    .postNav .prev span, .postNav .next span {
+      z-index: 10;
+      position: relative;
+      padding: 0.5rem;
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      width: 100%;
+      line-height: 1.4; }
+    .postNav .prev.image, .postNav .next.image {
+      text-decoration: none;
+      color: white;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+      padding: 0 0.5rem;
+      position: relative;
+      -webkit-transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out; }
+    .postNav .prev:hover.image, .postNav .next:hover.image {
+      opacity: 0.8; }
+  .postNav .prev {
+    float: left;
+    text-align: left; }
+    .postNav .prev span {
+      left: 0; }
+  .postNav .next {
+    text-align: right;
+    float: right; }
+    .postNav .next span {
+      right: 0; }
+
 pre,
 code {
   font-size: 15px;

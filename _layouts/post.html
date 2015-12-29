@@ -62,6 +62,29 @@
             {% endfor %}
           </section>
         </footer>
+
+        <!-- POST NAVIGATION -->
+         <div class="postNav clearfix">
+           {% if page.previous.url %} 
+             <div class="isLeft">
+               <a class="prev{% if page.previous.image %} image{% endif %}" href="{{ page.previous.url | prepend: site.baseurl }}"><span>&laquo;&nbsp;{{ page.previous.title }}</span>
+               {% if page.previous.image %} 
+                 <img src="{{ '' | prepend: site.baseurl | append: page.previous.image }}" alt="">
+               {% endif %}
+               </a>
+             </div>  
+           {% endif %}  
+           {% if page.next.url %}  
+           <div class="isRight">
+               <a class="next{% if page.next.image %} image{% endif %}" href="{{ page.next.url | prepend: site.baseurl }}"><span>{{ page.next.title }}&nbsp;&raquo;</span>
+               {% if page.next.image %} 
+                 <img src="{{ '' | prepend: site.baseurl | append: page.next.image }}" alt="">
+               {% endif %} 
+               </a>
+             </div>  
+           {% endif %} 
+         </div>
+
         <div class="bottom-teaser cf">
           <div class="isLeft">
             <h5 class="index-headline featured"><span>Written by</span></h5>
@@ -85,6 +108,7 @@
             </footer>
           </div>
         </div>
+
         {%if site.disqus %}
         <div id="disqus_thread"></div>
         <script type="text/javascript">
