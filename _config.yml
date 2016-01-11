@@ -62,3 +62,8 @@ social:
 #    share_url:
 #    share_title:
 #    share_link:
+
+exclude:
+  - bower.json
+  - s3_website.yml
+  - bower_components
